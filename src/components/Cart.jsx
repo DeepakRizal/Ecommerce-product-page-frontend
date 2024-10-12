@@ -63,7 +63,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-3 gap-3 mt-14">
         {cart.length === 0 && (
           <p className=" text-3xl text-center mt-8">No Items in the cart</p>
         )}
