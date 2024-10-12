@@ -1,0 +1,368 @@
+[
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "images": [
+      "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "https://contents.mediadecathlon.com/p754503/fbcee8b31f4e88a93c4271156a2fb9dc/p754503.jpg",
+      "https://5.imimg.com/data5/SELLER/Default/2021/9/GA/GP/OZ/40847258/024a6790-500x500.jpg"
+    ],
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    },
+    "reviews": [
+      {
+        "reviewer": "John",
+        "comment": "Great backpack, fits my laptop perfectly!",
+        "rating": 4
+      },
+      {
+        "reviewer": "Sara",
+        "comment": "The material could be better for the price.",
+        "rating": 3
+      },
+      {
+        "reviewer": "Mike",
+        "comment": "Perfect for hiking and daily use.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Anna",
+        "comment": "Love the color and design.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Tom",
+        "comment": "The padded sleeve isn't as protective as I expected.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mens Casual Premium Slim Fit T-Shirts",
+    "price": 22.3,
+    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing...",
+    "category": "men's clothing",
+    "images": [
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "https://ttbazaar.com/cdn/shop/products/HF01-RED_2_e572d59e-b21d-4347-9826-2c60171fe730.jpg?v=1620128539",
+      "https://www.sporto.in/cdn/shop/products/1_802603e8-29f0-4ccc-9e8b-343730c87564_1080x1440.jpg?v=1714717379"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 259
+    },
+    "reviews": [
+      {
+        "reviewer": "Alex",
+        "comment": "Comfortable and fits well.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Emma",
+        "comment": "Fabric is soft, but the color fades after washing.",
+        "rating": 3
+      },
+      {
+        "reviewer": "Liam",
+        "comment": "Perfect fit, looks great.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Sophia",
+        "comment": "The sleeves are a bit tight.",
+        "rating": 3
+      },
+      {
+        "reviewer": "Chris",
+        "comment": "Great value for the price.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Mens Cotton Jacket",
+    "price": 55.99,
+    "description": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions...",
+    "category": "men's clothing",
+    "images": [
+      "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "https://image.made-in-china.com/202f0j00EejiznosECkQ/Men-prime-S-Cotton-Jacket-Double-Sided-Wear-Stand-up-Collar-Men-prime-S-Large-Size-Autumn-New-Coat-Jacket-Coat-Wholesale-Customization.webp",
+      "https://image.made-in-china.com/2f0j00mKgWSYaZAbcu/100-Organic-Cotton-Neutral-Jacket-for-Men-Fall-Pocket-Canvas-Jacket-Eco-Friendly-Cotoon-Blazer-Men-Plus-Size-Jackets-Sustainable-Fall-Jacket-Anvas-Jacket.webp"
+    ],
+    "rating": {
+      "rate": 4.7,
+      "count": 500
+    },
+    "reviews": [
+      {
+        "reviewer": "Oliver",
+        "comment": "Very warm and stylish!",
+        "rating": 5
+      },
+      {
+        "reviewer": "Charlotte",
+        "comment": "Good quality but slightly oversized.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Benjamin",
+        "comment": "Perfect for chilly weather.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Mia",
+        "comment": "Looks good but the zipper is stiff.",
+        "rating": 4
+      },
+      {
+        "reviewer": "James",
+        "comment": "I use it every day, love it.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Mens Casual Slim Fit",
+    "price": 15.99,
+    "description": "The color could be slightly different between on the screen and in practice...",
+    "category": "men's clothing",
+    "images": [
+      "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "https://www.jiomart.com/images/product/original/rvydyb6ypx/baleshwar-man-s-solid-slim-fit-casual-shirt-for-men-shirts-bl-l-product-images-rvydyb6ypx-0-202303061152.jpg?im=Resize=(500,630)",
+      "https://getketchadmin.getketch.com/product/8905745204992/660/KHSH001033_1.jpg"
+    ],
+    "rating": {
+      "rate": 2.1,
+      "count": 430
+    },
+    "reviews": [
+      {
+        "reviewer": "Mason",
+        "comment": "Doesn't fit as expected.",
+        "rating": 2
+      },
+      { "reviewer": "Ella", "comment": "The fabric feels cheap.", "rating": 1 },
+      { "reviewer": "Ethan", "comment": "Not worth the price.", "rating": 2 },
+      {
+        "reviewer": "Amelia",
+        "comment": "Color is different than shown.",
+        "rating": 2
+      },
+      {
+        "reviewer": "Harper",
+        "comment": "Disappointed with the quality.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+    "price": 695,
+    "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon...",
+    "category": "jewelery",
+    "images": [
+      "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHkPTdNaomuihJzlEyyTouFezbbfILqcdnZQ&s",
+      "https://johnhardy.com/cdn/shop/files/1023_OCT_HP_PRODUCT_SCROLL_CROPS_BEST_SELLERS_BZS60193BSP_Front.jpg?v=1700586750&width=2000"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 400
+    },
+    "reviews": [
+      { "reviewer": "Lily", "comment": "Absolutely stunning!", "rating": 5 },
+      {
+        "reviewer": "Grace",
+        "comment": "Looks even better in person.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Noah",
+        "comment": "Great design but too expensive.",
+        "rating": 4
+      },
+      { "reviewer": "Isabella", "comment": "Worth every penny!", "rating": 5 },
+      {
+        "reviewer": "Lucas",
+        "comment": "Beautiful but feels delicate.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Solid Gold Petite Micropave",
+    "price": 168,
+    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days...",
+    "category": "jewelery",
+    "images": [
+      "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      "https://m.media-amazon.com/images/I/71CnYwz+scL._AC_UY1100_.jpg",
+      "https://www.livenco.com/cdn/shop/products/R01002879-R_1024x1024.jpg?v=1667249151"
+    ],
+    "rating": {
+      "rate": 3.9,
+      "count": 70
+    },
+    "reviews": [
+      { "reviewer": "Henry", "comment": "Beautiful and elegant.", "rating": 5 },
+      {
+        "reviewer": "Zoe",
+        "comment": "The stones are smaller than I expected.",
+        "rating": 3
+      },
+      { "reviewer": "Elijah", "comment": "Good value for money.", "rating": 4 },
+      { "reviewer": "Ava", "comment": "It's pretty but fragile.", "rating": 3 },
+      {
+        "reviewer": "Jack",
+        "comment": "Perfect gift for my wife!",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "White Gold Plated Princess",
+    "price": 9.99,
+    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her...",
+    "category": "jewelery",
+    "images": [
+      "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+      "https://5.imimg.com/data5/SELLER/Default/2024/1/373881784/JI/VR/FI/201863206/white-gold-princess-cut-diamond-ring-500x500.jpeg",
+      "https://image.made-in-china.com/2f0j00tezociJMrKbI/7X7mm-2carat-White-Gold-Plated-925-Sterling-Silver-Colorful-Wedding-Adjustable-Pink-Princess-Cut-Moissanite-Diamond-Ring.webp"
+    ],
+    "rating": {
+      "rate": 3,
+      "count": 400
+    },
+    "reviews": [
+      { "reviewer": "Emily", "comment": "Looks cheap.", "rating": 2 },
+      { "reviewer": "Daniel", "comment": "Okay for the price.", "rating": 3 },
+      {
+        "reviewer": "Scarlett",
+        "comment": "Not what I expected.",
+        "rating": 2
+      },
+      {
+        "reviewer": "Jacob",
+        "comment": "Good for a costume piece.",
+        "rating": 3
+      },
+      { "reviewer": "Sophia", "comment": "It broke after a week.", "rating": 1 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+    "price": 10.99,
+    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings...",
+    "category": "jewelery",
+    "images": [
+      "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+      "https://m.media-amazon.com/images/I/51UDEzMJVpL._AC_UY1100_.jpg",
+      "https://m.media-amazon.com/images/I/61rc+YSZslL._AC_UY1100_.jpg"
+    ],
+    "rating": {
+      "rate": 1.9,
+      "count": 100
+    },
+    "reviews": [
+      { "reviewer": "Matthew", "comment": "Very poor quality.", "rating": 1 },
+      {
+        "reviewer": "Olivia",
+        "comment": "Too small, hard to wear.",
+        "rating": 2
+      },
+      {
+        "reviewer": "Lily",
+        "comment": "Looks good but feels cheap.",
+        "rating": 2
+      },
+      { "reviewer": "Aiden", "comment": "Not worth the price.", "rating": 1 },
+      { "reviewer": "Hannah", "comment": "Broke easily.", "rating": 1 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0",
+    "price": 64,
+    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers...",
+    "category": "electronics",
+    "images": [
+      "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      "https://computechstore.in/wp-content/uploads/2022/10/WD-Elements-USB-3.0-1TB--595x595.jpg",
+      "https://m.media-amazon.com/images/I/51EAuzF9PvL._SX350_.jpg"
+    ],
+    "rating": {
+      "rate": 3.3,
+      "count": 203
+    },
+    "reviews": [
+      {
+        "reviewer": "David",
+        "comment": "Works great, fast transfer speed.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Ella",
+        "comment": "A bit bulky but reliable.",
+        "rating": 3
+      },
+      { "reviewer": "Joshua", "comment": "Perfect for backup.", "rating": 4 },
+      {
+        "reviewer": "Mila",
+        "comment": "Stopped working after a few months.",
+        "rating": 2
+      },
+      {
+        "reviewer": "Evelyn",
+        "comment": "Not as fast as advertised.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+    "price": 109,
+    "description": "Easy upgrade for faster boot up, shutdown, application load and response...",
+    "category": "electronics",
+    "images": [
+      "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71iujXbuoML.jpg",
+      "https://m.media-amazon.com/images/I/61NsWbljJ4L.jpg"
+    ],
+    "rating": {
+      "rate": 2.9,
+      "count": 470
+    },
+    "reviews": [
+      {
+        "reviewer": "Michael",
+        "comment": "Made my computer so much faster.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Abigail",
+        "comment": "Easy to install but not as fast as expected.",
+        "rating": 3
+      },
+      { "reviewer": "Logan", "comment": "Good value SSD.", "rating": 4 },
+      {
+        "reviewer": "Luna",
+        "comment": "Died after a few months.",
+        "rating": 1
+      },
+      { "reviewer": "Zachary", "comment": "Not reliable, avoid.", "rating": 2 }
+    ]
+  }
+]
