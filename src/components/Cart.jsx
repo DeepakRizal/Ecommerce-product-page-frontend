@@ -65,7 +65,11 @@ const Cart = () => {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-3 gap-3 mt-14">
         {cart.length === 0 && (
-          <p className=" text-3xl text-center mt-8">No Items in the cart</p>
+          <div className="flex col-span-full p-20 items-center justify-center">
+            <p className=" text-4xl font-semibold mt-8">
+              No Items to show in the cart
+            </p>
+          </div>
         )}
 
         {cart.map((product) => (

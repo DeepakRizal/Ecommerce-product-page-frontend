@@ -8,7 +8,7 @@ const Navigation = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex px-10 md:px-6 lg:px-10 py-4 justify-between bg-blue-900 text-white ">
-      <Link to={"/"} className=" font-bold ">
+      <Link to={"/"} className="font-bold ">
         Product page
       </Link>
       <Link to={"/cart"} className=" relative ">
