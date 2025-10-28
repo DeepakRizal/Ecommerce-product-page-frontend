@@ -24,13 +24,17 @@ const ImageGallery = ({ images }) => {
 
   return (
     <div className=" relative flex items-center justify-center ">
-      <button className=" absolute top-46 left-2" onClick={handlePrevClick}>
-        <ArrowBackIosNewIcon />
-      </button>
+      {images.length > 1 && (
+        <button className=" absolute top-46 left-2" onClick={handlePrevClick}>
+          <ArrowBackIosNewIcon />
+        </button>
+      )}
       <img className=" h-80 " src={images[currentIndex]} />
-      <button className=" absolute top-46 right-2" onClick={handleNextClick}>
-        <ArrowForwardIosIcon />
-      </button>
+      {images.length > 1 && (
+        <button className=" absolute top-46 right-2" onClick={handleNextClick}>
+          <ArrowForwardIosIcon />
+        </button>
+      )}
     </div>
   );
 };
