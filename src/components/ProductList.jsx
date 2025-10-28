@@ -40,7 +40,7 @@ const ProductList = () => {
       <div className="">
         <button
           onClick={handleClick}
-          className="bg-gray-500 m-2 px-4 py-2 rounded-md text-white"
+          className="bg-gray-500 m-2 px-4 py-1 rounded-md text-white"
         >
           All
         </button>
@@ -48,7 +48,7 @@ const ProductList = () => {
         {allCategories.map((category, index) => (
           <button
             onClick={handleClick}
-            className="bg-gray-500 m-2 px-4 py-2 rounded-md text-white"
+            className="bg-gray-500 m-1 px-4 py-1 rounded-md text-white"
             key={category + index}
           >
             {category}
