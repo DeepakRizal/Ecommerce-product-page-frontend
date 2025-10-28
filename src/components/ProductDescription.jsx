@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import ImageGallery from "./ImageGallery";
 import { useContext, useEffect, useState } from "react";
@@ -28,7 +29,13 @@ const ProductDescription = () => {
   }
 
   return (
-    <div className="p-4 mt-14">
+    <div className="p-4 mt-14 relative">
+      <Link
+        to={"/"}
+        className="absolute z-10 left-10 md:left-20 cursor-pointer top-10"
+      >
+        <ArrowBackIcon />
+      </Link>
       {product.images && <ImageGallery images={product.images} />}
       <div className="product-description p-10 lg:px-32 py-20">
         <p className="text-2xl underline ">{product.title}</p>
