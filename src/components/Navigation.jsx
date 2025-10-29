@@ -6,6 +6,8 @@ import { CartContext } from "../features/ContextProvider";
 const Navigation = () => {
   const { cart } = useContext(CartContext);
 
+  console.log(cart);
+
   const totalProduct = cart.reduce((acc, item) => (acc += item.quantity), 0);
 
   return (

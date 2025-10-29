@@ -21,10 +21,20 @@ const ProductDescription = () => {
   }, [id]);
 
   function handleClick(product) {
-    const updatedCart = cart.map((p) =>
-      p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
-    );
-    dispatch({ type: "Increase", updatedCart });
+    const productExist = cart.find((product) => product.id === parseInt(id));
+
+    console.log(productExist);
+
+    if (productExist) {
+      const updatedCart = cart.map((p) =>
+        p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
+      );
+      dispatch({ type: "Increase", updatedCart });
+    } else {
+      const productWithQuanity = { ...product, quantity: 1 };
+
+      dispatch({ type: "Add", product: productWithQuanity });
+    }
   }
 
   return (
@@ -36,7 +46,7 @@ const ProductDescription = () => {
         <ArrowBackIcon />
       </Link>
       {product.images && <ImageGallery images={product.images} />}
-      <div className="product-description p-10 lg:px-32 py-20">
+      <div className="product-description mb-5 p-10 lg:px-32 py-20">
         <p className="text-2xl underline ">{product.title}</p>
         <div className=" px-10 md:px-20 py-2 rating-price flex gap-28 items-center">
           <p className="text-2xl">
@@ -46,8 +56,13 @@ const ProductDescription = () => {
             Rs. <span className="font-bold">{product.price}</span>
           </p>
         </div>
-        <button onClick={() => handleClick(product)}>ADD TO CART</button>
-        <p className=" text-gray-600">{product.description}</p>
+        <button
+          className="bg-gray-600 py-2 px-3 rounded-md text-white"
+          onClick={() => handleClick(product)}
+        >
+          ADD TO CART
+        </button>
+        <p className=" mt-5 text-gray-600">{product.description}</p>
       </div>
       <h3 className="px-10 mb-2 text-2xl font-bold">Reviews</h3>
       <div className="ratings px-10">
