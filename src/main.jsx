@@ -8,6 +8,10 @@ import Layout from "./components/Layout.jsx";
 import Cart from "./components/Cart.jsx";
 import ProductDescription from "./components/ProductDescription.jsx";
 
+const base = import.meta.env.PROD ? "/Ecommerce-product-page-frontend" : "/";
+
+console.log(base);
+
 const router = createBrowserRouter(
   [
     {
@@ -36,7 +40,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/Ecommerce-product-page-frontend",
+    basename: base,
   }
 );
 
