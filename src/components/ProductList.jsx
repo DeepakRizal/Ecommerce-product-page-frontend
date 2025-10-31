@@ -10,6 +10,8 @@ const ProductList = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [page, setPage] = useState(1);
 
+  const totalPages = Math.ceil(194 / 20);
+
   useEffect(() => {
     const getProducts = async () => {
       const skip = (page - 1) * 20;
@@ -49,11 +51,13 @@ const ProductList = () => {
   };
 
   const handleNext = () => {
-    setPage((prev) => prev + 1);
+    if (page < totalPages) {
+      setPage((prev) => prev + 1);
+    }
   };
 
   return (
-    <div className=" p-4 bg-gray-200 mt-14 ">
+    <div className=" p-4 bg-gray-400 mt-14 ">
       <div className="">
         <button
           onClick={handleClick}
@@ -67,7 +71,7 @@ const ProductList = () => {
         {allCategories.map((category, index) => (
           <button
             onClick={handleClick}
-            className={` ${
+            className={`${
               activeCategory === category ? " bg-gray-700" : "bg-gray-500"
             } m-1 px-4 py-1 rounded-md text-white`}
             key={category + index}

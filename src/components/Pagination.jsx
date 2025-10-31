@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Pagination = ({ page, handleNext, handlePrev }) => {
   return (
-    <div className="flex items-center justify-center gap-4 py-4 sticky bottom-5">
+    <div className="flex items-center justify-center gap-4 py-4 sticky bottom-3">
       <button
         disabled={page === 1}
         onClick={handlePrev}
@@ -13,7 +13,7 @@ const Pagination = ({ page, handleNext, handlePrev }) => {
       >
         Prev
       </button>
-      <span className="text-gray-700 font-medium">{page}</span>
+      <span className="text-white font-bold ">{page}</span>
       <button
         onClick={handleNext}
         className="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-600 transition text-gray-100"
