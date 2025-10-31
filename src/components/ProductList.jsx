@@ -2,22 +2,25 @@ import { useEffect, useState } from "react";
 
 import Product from "./Product";
 import { fetchAllProducts } from "../api/productsApi";
+import Pagination from "./Pagination";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState([]);
   const [activeCategory, setActiveCategory] = useState("All");
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const getProducts = async () => {
-      const products = await fetchAllProducts();
+      const skip = (page - 1) * 20;
+      const products = await fetchAllProducts(skip);
 
       setProducts(products);
       setFilters(products);
     };
 
     getProducts();
-  }, []);
+  }, [page]);
 
   const allCategories =
     products.length > 1
@@ -39,14 +42,24 @@ const ProductList = () => {
     }
   }
 
+  const handlePrev = () => {
+    if (page > 1) {
+      setPage((prev) => prev - 1);
+    }
+  };
+
+  const handleNext = () => {
+    setPage((prev) => prev + 1);
+  };
+
   return (
-    <div className=" p-4 bg-gray-200 mt-14">
+    <div className=" p-4 bg-gray-200 mt-14 ">
       <div className="">
         <button
           onClick={handleClick}
           className={` ${
             activeCategory === "All" ? " bg-gray-700" : "bg-gray-500"
-          } m-2 px-4 py-1 rounded-md text-white`}
+          } m-1 px-4 py-1 rounded-md text-white`}
         >
           All
         </button>
@@ -56,7 +69,7 @@ const ProductList = () => {
             onClick={handleClick}
             className={` ${
               activeCategory === category ? " bg-gray-700" : "bg-gray-500"
-            } m-2 px-4 py-1 rounded-md text-white`}
+            } m-1 px-4 py-1 rounded-md text-white`}
             key={category + index}
           >
             {category}
@@ -68,6 +81,7 @@ const ProductList = () => {
           <Product key={product.id} product={product} />
         ))}
       </div>
+      <Pagination page={page} handleNext={handleNext} handlePrev={handlePrev} />
     </div>
   );
 };

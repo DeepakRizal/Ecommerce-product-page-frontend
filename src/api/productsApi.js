@@ -1,7 +1,7 @@
 const baseUrl = "https://dummyjson.com";
 
-export const fetchAllProducts = async () => {
-  const response = await fetch(`${baseUrl}/products`);
+export const fetchAllProducts = async (skip = 0) => {
+  const response = await fetch(`${baseUrl}/products?limit=20&skip=${skip}`);
   if (!response.ok) throw new Error("Failed to fetch products");
   const data = await response.json();
 

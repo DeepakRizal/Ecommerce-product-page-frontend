@@ -12,17 +12,12 @@ const Product = ({ product }) => {
 
     if (productIsThereInCart) {
       const updatedCart = cart.map((p) =>
-        p.id === product.id
-          ? {
-              ...p,
-              quantity: p.quantity + 1,
-            }
-          : p
+        p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p
       );
       dispatch({ type: "Increase", updatedCart });
     } else {
-      const productWithQuanity = { ...product, quantity: 1 };
-      dispatch({ type: "Add", product: productWithQuanity });
+      const productWithQuantity = { ...product, quantity: 1 };
+      dispatch({ type: "Add", product: productWithQuantity });
     }
   }
 
@@ -33,27 +28,35 @@ const Product = ({ product }) => {
   return (
     <div
       onClick={handleNavigate}
-      className="flex flex-col items-center bg-slate-800 text-white py-6 rounded-md cursor-pointer"
+      className="flex flex-col bg-slate-800 text-white rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer overflow-hidden"
     >
       <img
-        className=" h-52 p-2 "
-        src={product["images"][0]}
+        className="h-40 w-full object-contain bg-slate-900 p-3"
+        src={product.images[0]}
         alt={product.title}
       />
-      <p className=" text-center">{product.title}</p>
-      <div className="flex items-center justify-between gap-7 p-2">
-        <p>ratings: {product.rating.rate}</p>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleClick(product);
-          }}
-          className="bg-green-800 hover:bg-green-900 px-2 py-2 rounded-md"
-        >
-          Add to Cart
-        </button>
+      <div className="flex flex-col justify-between flex-grow px-3 py-2">
+        <p className="text-sm text-center font-medium line-clamp-2">
+          {product.title}
+        </p>
+
+        <div className="flex items-center justify-between text-sm mt-2">
+          <p>⭐ {product.rating?.rate || product.rating}</p>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClick(product);
+            }}
+            className="bg-green-700 hover:bg-green-800 px-3 py-1 rounded-md text-xs"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <p className="text-lg font-semibold text-center mt-2">
+          ₹{product.price}
+        </p>
       </div>
-      <p className="text-2xl font-bold">Price: Rs.{product.price}</p>
     </div>
   );
 };
