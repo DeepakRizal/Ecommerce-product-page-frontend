@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../features/ContextProvider";
 import { useNavigate } from "react-router-dom";
-
+import StarIcon from "@mui/icons-material/Star";
 /* eslint-disable react/prop-types */
 const Product = ({ product }) => {
   const { dispatch, cart } = useContext(CartContext);
@@ -41,7 +41,10 @@ const Product = ({ product }) => {
         </p>
 
         <div className="flex items-center justify-between text-sm mt-2">
-          <p>⭐ {product.rating?.rate || product.rating}</p>
+          <p className="flex items-center gap-2">
+            <StarIcon className="text-yellow-500" />{" "}
+            <span>{product.rating?.rate || product.rating}</span>
+          </p>
           <button
             onClick={(e) => {
               e.stopPropagation();
