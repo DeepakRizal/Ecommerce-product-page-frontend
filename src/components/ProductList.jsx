@@ -57,7 +57,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className=" p-4 bg-gray-400 mt-14 ">
+    <div className=" p-4 bg-gray-400  mt-24 md:mt-12 ">
       <div className="">
         <button
           onClick={handleClick}
