@@ -7,6 +7,7 @@ import ContextProvider from "./features/ContextProvider.jsx";
 import Layout from "./components/Layout.jsx";
 import Cart from "./components/Cart.jsx";
 import ProductDescription from "./components/ProductDescription.jsx";
+import SearchContextProvider from "./features/searchContext.jsx";
 
 const base = import.meta.env.PROD ? "/Ecommerce-product-page-frontend" : "/";
 
@@ -47,7 +48,9 @@ const router = createBrowserRouter(
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ContextProvider>
-      <RouterProvider router={router} />
+      <SearchContextProvider>
+        <RouterProvider router={router} />
+      </SearchContextProvider>
     </ContextProvider>
   </StrictMode>
 );

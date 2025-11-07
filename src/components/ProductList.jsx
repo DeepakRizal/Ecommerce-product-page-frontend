@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Product from "./Product";
 import { fetchAllProducts } from "../api/productsApi";
 import Pagination from "./Pagination";
+import { SearchContext } from "../features/searchContext";
 
 const ProductList = () => {
+  const { query } = useContext(SearchContext);
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState([]);
   const [activeCategory, setActiveCategory] = useState("All");
@@ -23,6 +25,13 @@ const ProductList = () => {
 
     getProducts();
   }, [page]);
+
+  useEffect(() => {
+    const filtered = products.filter((p) =>
+      p.title.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilters(filtered);
+  }, [query, products]);
 
   const allCategories =
     products.length > 1

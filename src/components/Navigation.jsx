@@ -2,9 +2,11 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../features/ContextProvider";
+import { SearchContext } from "../features/searchContext";
 
 const Navigation = () => {
   const { cart } = useContext(CartContext);
+  const { query, setQuery } = useContext(SearchContext);
   const totalProduct = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
@@ -23,6 +25,8 @@ const Navigation = () => {
           <input
             type="text"
             placeholder="Search products..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
             className="w-full max-w-sm px-3 py-2 rounded-md text-gray-900 outline-none focus:ring-2 focus:ring-blue-400 transition-all"
           />
         </div>
