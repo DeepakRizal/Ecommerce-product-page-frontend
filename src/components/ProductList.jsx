@@ -86,76 +86,105 @@ const ProductList = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-400 mt-24 md:mt-12 min-h-screen">
-      {/* Categories Section */}
-      <div className="mt-3">
-        <button
-          onClick={handleClick}
-          className={`${
-            activeCategory === "All" ? "bg-gray-700" : "bg-gray-500"
-          } m-1 px-4 py-1 rounded-md text-white`}
-        >
-          All
-        </button>
+    <div className="p-4 md:p-6 bg-gray-400 mt-24 md:mt-12 min-h-screen">
+      {/* Filters and Sort Container */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 md:p-5 space-y-4">
+        {/* Categories Section */}
+        <div>
+          <h3 className="text-sm font-semibold text-gray-800 mb-3 tracking-wide">
+            Categories
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={handleClick}
+              className={`${
+                activeCategory === "All"
+                  ? "bg-gray-900 text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              } px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 active:scale-95`}
+            >
+              All
+            </button>
 
-        {allCategories.map((category, index) => (
-          <button
-            onClick={handleClick}
-            className={`${
-              activeCategory === category ? "bg-gray-700" : "bg-gray-500"
-            } m-1 px-4 py-1 rounded-md text-white`}
-            key={category + index}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      {/* Sort Dropdown */}
-      <div className="flex items-center justify-between flex-wrap gap-3 my-4">
-        <div className="text-sm text-gray-700">
-          Showing <span className="font-semibold">{filters.length}</span>{" "}
-          products
+            {allCategories.map((category, index) => (
+              <button
+                key={category + index}
+                onClick={handleClick}
+                className={`${
+                  activeCategory === category
+                    ? "bg-gray-900 text-white shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                } px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 active:scale-95`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="relative">
-          <button
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 bg-white px-4 py-2 rounded-md shadow-sm border border-gray-300 hover:bg-gray-50 transition-colors min-w-[200px] justify-between"
-          >
-            <span className="text-sm font-medium text-gray-700">
-              Sort by: {currentSortLabel}
-            </span>
-            <ChevronDown
-              className={`w-4 h-4 text-gray-500 transition-transform ${
-                isDropdownOpen ? "rotate-180" : ""
-              }`}
-            />
-          </button>
+        {/* Divider */}
+        <div className="border-t border-gray-100"></div>
 
-          {/* Dropdown Menu */}
-          {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-full min-w-[220px] bg-white rounded-md shadow-lg border border-gray-200 z-10">
-              {sortOptions.map((option) => (
-                <button
-                  key={option.value}
-                  onClick={() => handleSortChange(option.value)}
-                  className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${
-                    sortBy === option.value
-                      ? "bg-gray-100 font-semibold text-gray-900"
-                      : "text-gray-700"
-                  } first:rounded-t-md last:rounded-b-md`}
-                >
-                  {option.label}
-                </button>
-              ))}
+        {/* Product Count & Sort Section */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="text-sm text-gray-600">
+            Showing{" "}
+            <span className="font-semibold text-gray-900">
+              {filters.length}
+            </span>{" "}
+            {filters.length === 1 ? "product" : "products"}
+          </div>
+
+          {/* Sort Dropdown */}
+          <div className="relative w-full sm:w-auto">
+            <div
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-2 cursor-pointer select-none"
+            >
+              <span className="text-sm text-gray-700">
+                <span className="hidden sm:inline font-medium">Sort by:</span>{" "}
+                <span className="font-semibold text-gray-900 underline underline-offset-2 hover:text-gray-600 transition-colors duration-150">
+                  {currentSortLabel}
+                </span>
+              </span>
+              <ChevronDown
+                className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
             </div>
-          )}
+
+            {isDropdownOpen && (
+              <>
+                {/* Click outside to close (mobile overlay) */}
+                <div
+                  className="fixed inset-0 z-10 sm:hidden"
+                  onClick={() => setIsDropdownOpen(false)}
+                ></div>
+
+                <div className="absolute right-0 mt-2 w-full sm:min-w-[220px] bg-white rounded-xl shadow-lg border border-gray-200 z-20 overflow-hidden animate-fadeIn">
+                  {sortOptions.map((option, index) => (
+                    <button
+                      key={option.value}
+                      onClick={() => handleSortChange(option.value)}
+                      className={`w-full text-left px-4 py-3 text-sm transition-colors ${
+                        sortBy === option.value
+                          ? "bg-gray-900 text-white font-medium"
+                          : "text-gray-700 hover:bg-gray-100"
+                      } ${index !== 0 ? "border-t border-gray-100" : ""}`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Product Grid */}
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
         {filters.map((product) => (
           <Product key={product.id} product={product} />
         ))}
