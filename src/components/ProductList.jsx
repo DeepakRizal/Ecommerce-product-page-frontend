@@ -14,8 +14,6 @@ export default function ProductList() {
   const [sortBy, setSortBy] = useState("default");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // NEW: controls whether the full "filters + sorting" panel is expanded.
-  // Default: collapsed but categories (the main filter area) remain visible.
   const [isFiltersExpanded, setIsFiltersExpanded] = useState(false);
 
   const totalPages = Math.ceil(194 / 20);
@@ -145,7 +143,7 @@ export default function ProductList() {
 
         {/* Divider is hidden when collapsed; the rest (count + sort) live inside a collapsible section */}
         <div
-          className={`overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-in-out ${
+          className={`transition-[max-height,opacity,transform] duration-300 ease-in-out ${
             isFiltersExpanded
               ? "max-h-[800px] opacity-100"
               : "max-h-0 opacity-0"
@@ -165,11 +163,16 @@ export default function ProductList() {
             {/* Sort Dropdown */}
             <div className="relative w-full sm:w-auto">
               <div
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsDropdownOpen((prev) => !prev);
+                }}
                 className="flex items-center gap-2 cursor-pointer select-none"
               >
                 <span className="text-sm text-gray-200">
-                  <span className="hidden sm:inline font-medium">Sort by:</span>{" "}
+                  <span className="hidden sm:inline font-medium">
+                    Sort by:{" "}
+                  </span>{" "}
                   <span className="font-semibold text-white underline underline-offset-2 hover:text-gray-300 transition-colors duration-150">
                     {currentSortLabel}
                   </span>
@@ -189,7 +192,10 @@ export default function ProductList() {
                     onClick={() => setIsDropdownOpen(false)}
                   ></div>
 
-                  <div className="absolute right-0 mt-2 w-full sm:min-w-[220px] bg-slate-900 rounded-xl shadow-lg border border-slate-700 z-20 overflow-hidden animate-fadeIn">
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className="absolute right-0 mt-2 w-full sm:min-w-[220px] bg-slate-900 rounded-xl shadow-lg border border-slate-700 z-20 overflow-hidden"
+                  >
                     {sortOptions.map((option, index) => (
                       <button
                         key={option.value}
