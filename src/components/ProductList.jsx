@@ -69,11 +69,13 @@ export default function ProductList() {
     if (page > 1) {
       setPage((prev) => prev - 1);
     }
+    setSortBy("default");
   };
 
   const handleNext = () => {
     if (page < totalPages) {
       setPage((prev) => prev + 1);
+      setSortBy("default");
     }
   };
 
