@@ -37,6 +37,11 @@ export default function ProductList() {
     setFilters(filtered);
   }, [query, products]);
 
+  useEffect(() => {
+    const sorted = sortProducts(filters, sortBy);
+    setFilters(sorted);
+  }, [sortBy]);
+
   const allCategories =
     products.length > 1
       ? [...new Set(products.map((product) => product.category))]
@@ -50,10 +55,13 @@ export default function ProductList() {
     if (buttonText === "All") {
       setFilters(products);
     } else {
+      console.log(products);
+      console.log(buttonText);
       const filtered = products.filter(
         (product) => product.category === buttonText
       );
-      setFilters(filtered);
+      const sorted = sortProducts(filtered, sortBy);
+      setFilters(sorted);
     }
   }
 
@@ -75,8 +83,6 @@ export default function ProductList() {
     { value: "price-high", label: "Price: High to Low" },
     { value: "rating-high", label: "Rating: High to Low" },
     { value: "rating-low", label: "Rating: Low to High" },
-    { value: "name-az", label: "Name: A to Z" },
-    { value: "name-za", label: "Name: Z to A" },
   ];
 
   const currentSortLabel =
@@ -85,6 +91,23 @@ export default function ProductList() {
   const handleSortChange = (sortOption) => {
     setSortBy(sortOption);
     setIsDropdownOpen(false);
+  };
+
+  const sortProducts = (list, sortBy) => {
+    const sorted = [...list];
+
+    switch (sortBy) {
+      case "price-low":
+        return sorted.sort((a, b) => a.price - b.price);
+      case "price-high":
+        return sorted.sort((a, b) => b.price - a.price);
+      case "rating-high":
+        return sorted.sort((a, b) => b.rating - a.rating);
+      case "rating-low":
+        return sorted.sort((a, b) => a.rating - b.rating);
+      default:
+        return sorted;
+    }
   };
 
   return (
